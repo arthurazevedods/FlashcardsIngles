@@ -1,19 +1,14 @@
 let currentIndex = 0; // Índice da palavra atual
 
-// Função para obter um número aleatório entre 0 e max (exclusivo)
-function getRandomInt(max) {
-    return Math.floor(Math.random() * max);
-}
-
 function updateWord() {
     const flashWord = document.querySelector(".word");
-    const flashAnswer = document.querySelector(".answer");
+    const flashTraducao = document.querySelector(".traducao");
 
     // Verifica se as palavras já foram carregadas
     if (window.jsonWords && window.jsonWords.length > 0) {
         // Exibe a palavra atual
-        flashWord.innerHTML = window.jsonWords[currentIndex]["word"];
-        flashAnswer.innerHTML = window.jsonWords[currentIndex]["traducao"];
+        flashWord.innerHTML = window.jsonWords[currentIndex]["word"].toUpperCase();
+        flashTraducao.innerHTML = window.jsonWords[currentIndex]["traducao"].toUpperCase();
 
         // Atualiza o índice para a próxima palavra (lista circular)
         currentIndex = (currentIndex + 1) % window.jsonWords.length;

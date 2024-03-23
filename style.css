@@ -7,82 +7,156 @@
     font-family: "Montserrat", sans-serif;
 }
 
+
 body {
-    background-color: black;
-}
+    background-color: #DFDBE5;
+background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%239C92AC' fill-opacity='0.09'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");}
 
-.wrapper{
+
+.container {
     position: absolute;
-    transform: translate(-50%,-50%);
-    left: 50%;
+    transform: translate(-50%, -50%);
     top: 50%;
+    left: 50%;
 }
 
-.card{
+.flip-card {
+    background-color: transparent;
+    width: 190px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+}
+
+.word,
+.traducao {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    margin: 0;
+}
+
+.card-language {
+    font-size: 0.8em;
+}
+
+.msg-card-front {
+
+    font-size: 0.8em;
+}
+
+.flip-card-inner {
     position: relative;
-    border-radius: 10px;
-    width: 220px;
-    height: 300px;
-    background-color: whitesmoke;
-    -webkit-box-shadow: 1px 1px 12px #000;
-    box-shadow: 1px 1px 12px #000;
-    -webkit-transform: preserve-3d;
-    -ms-transform: preserve-3d;
-    transform: preserve-3d;
-    -webkit-perspective: 2000px;
-    perspective: 2000px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    color: #000;
-
-    font-size: 30px;
-    font-weight: 700;
-}
-
-.word{
-    top: 0;
-    position: absolute;
-    background-color: lightgray;
     width: 100%;
     height: 100%;
-    border-radius: 10px;
-    cursor: pointer;
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-transform-origin: 0;
-    -ms-transform-origin: 0;
-    transform-origin: 0;
-    -webkit-box-shadow: 1px 1px 12px #000;
-    box-shadow: 1px 1px 12px #000;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid #577590;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background-color: #21D4FD;
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+
+    color: #fff;
+}
+
+.flip-card-back {
+    background-color: #FBDA61;
+    background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+.word .traducao {
+    text-transform: uppercase;
+}
+
+.buttons {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    display: flex;
+    height: 3em;
     align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    transition: all 0.2s linear;
+    cursor: pointer;
+    border: none;
+    background-color: #eeeeee4b;
+    background: #fff;
+    margin-top: 1em;
+    margin-left: 0;
+    margin-right: 0;
 }
 
-.card:hover .word{
-    -webkit-transition: all 0.5s;
-    transition: all 0.5s;
-    -webkit-transform: rotatey(-80deg);
-    -ms-transform: rotatey(-80deg);
-    transform: rotatey(-80deg);
+.buttonDontKnow .buttonKnow {
+    width: 80px;
 }
 
-.answer{
-    font-size: 30px;
-    font-weight: bolder;
+.buttonDontKnow {
+    background-color: #f94144;
+    color: #fff;
+    padding: 10px 5px;
 }
 
+.buttonKnow {
+    background-color: #43aa8b;
+    color: #fff;
+    padding: 5px 5px;
+}
 
+.buttonDontKnow>i .buttonKnow>i {
+    font-size: 14px;
+}
+
+.buttonNext {
+    width: 100%;
+    gap: 10px;
+    background-color: #277da1;
+    color: #fff;
+}
+
+button>i {
+    margin-right: 15px;
+    margin-left: 5px;
+    transition: all 0.4s ease-in;
+}
+
+.buttonNext>i {
+    font-size: 20px;
+}
+
+.buttonNext:hover>i {
+    font-size: 1.7em;
+    transform: translateX(10px);
+}
+
+.buttonNext:hover {
+    transform: translateY(-2px);
+}
