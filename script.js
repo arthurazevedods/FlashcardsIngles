@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
 document.getElementById('changeButton').addEventListener('click', function() {
     updateWord(false);
 });
-
-
+document.getElementById('bntDontKnow').addEventListener('click', function() {
+    updateWord(false);
+});
 
 document.getElementById('bntKnow').addEventListener('click', function() {
     updateWord(true);
