@@ -1,12 +1,48 @@
 let currentIndex = 0; // Índice da palavra atual
 let btn = false;
 let knowWords = 0;
+const arrDesconhecidas = [];
 const flashWord = document.querySelector(".word");
 const flashTraducao = document.querySelector(".traducao");
 const numberWords = document.querySelector(".numberWords");
 const conhecidas = document.querySelector(".conhecidas");
 const buttonKnow = document.getElementById("btnKnow");
 const buttonDontKnow = document.getElementById("btnDontKnow");
+const desconhecidas = document.querySelector(".dont-know-words-container");
+
+function updateDontWords() {
+    // Verifica se as palavras já foram carregadas
+    if (window.jsonWords && window.jsonWords.length > 0) {
+        // Cria um novo elemento div para a palavra desconhecida
+        const newElm = document.createElement('div');
+        newElm.classList.add("dont-know-word");
+
+        // Cria elementos div para exibir a palavra e sua tradução
+        const elmWord = document.createElement('div');
+        const elmTranslate = document.createElement('div');
+
+        elmWord.classList.add("dont-know-elmword");
+        elmTranslate.classList.add("dont-know-elmtranslate");
+
+        // Obtém a palavra e sua tradução a partir do JSON usando o índice atual
+        const currentWord = window.jsonWords[currentIndex]["word"].toUpperCase();
+        const currentTranslation = window.jsonWords[currentIndex]["traducao"].toUpperCase();
+
+        // Define o conteúdo dos elementos div criados
+        elmWord.innerHTML = currentWord;
+        elmTranslate.innerHTML = currentTranslation;
+
+        // Adiciona os elementos div criados ao elemento principal da lista de palavras desconhecidas
+        newElm.appendChild(elmWord);
+        newElm.appendChild(elmTranslate);
+
+        // Adiciona o novo elemento à lista de palavras desconhecidas
+        desconhecidas.appendChild(newElm);
+        arrDesconhecidas.push(newElm);
+    } else {
+        console.error('Erro: Nenhuma palavra disponível.');
+    }
+}
 
 
 function updateWord(btn) {
@@ -53,6 +89,7 @@ document.getElementById('changeButton').addEventListener('click', function() {
     updateWord(false);
 });
 document.getElementById('bntDontKnow').addEventListener('click', function() {
+    updateDontWords(); 
     updateWord(false);
 });
 

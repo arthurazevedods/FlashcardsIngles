@@ -13,6 +13,186 @@
     },
     {
         "word": "Open",
-        "traducao": "Aberto/Abrir"
+        "traducao": "Aberto"
+    },
+    {
+        "word": "Close",
+        "traducao": "Fechado"
+    },
+    {
+        "word": "Red",
+        "traducao": "Vermelho"
+    },
+    {
+        "word": "Green",
+        "traducao": "Verde"
+    },
+    {
+        "word": "Yellow",
+        "traducao": "Amarelo"
+    },
+    {
+        "word": "Sun",
+        "traducao": "Sol"
+    },
+    {
+        "word": "Moon",
+        "traducao": "Lua"
+    },
+    {
+        "word": "Cat",
+        "traducao": "Gato"
+    },
+    {
+        "word": "Dog",
+        "traducao": "Cachorro"
+    },
+    {
+        "word": "Tree",
+        "traducao": "Árvore"
+    },
+    {
+        "word": "Book",
+        "traducao": "Livro"
+    },
+    {
+        "word": "Table",
+        "traducao": "Mesa"
+    },
+    {
+        "word": "Chair",
+        "traducao": "Cadeira"
+    },
+    {
+        "word": "Computer",
+        "traducao": "Computador"
+    },
+    {
+        "word": "Phone",
+        "traducao": "Telefone"
+    },
+    {
+        "word": "House",
+        "traducao": "Casa"
+    },
+    {
+        "word": "Car",
+        "traducao": "Carro"
+    },
+    {
+        "word": "Bicycle",
+        "traducao": "Bicicleta"
+    },
+    {
+        "word": "Water",
+        "traducao": "Água"
+    },
+    {
+        "word": "Fire",
+        "traducao": "Fogo"
+    },
+    {
+        "word": "Air",
+        "traducao": "Ar"
+    },
+    {
+        "word": "Earth",
+        "traducao": "Terra"
+    },
+    {
+        "word": "Fish",
+        "traducao": "Peixe"
+    },
+    {
+        "word": "Bird",
+        "traducao": "Pássaro"
+    },
+    {
+        "word": "Friend",
+        "traducao": "Amigo"
+    },
+    {
+        "word": "Family",
+        "traducao": "Família"
+    },
+    {
+        "word": "Love",
+        "traducao": "Amor"
+    },
+    {
+        "word": "Hate",
+        "traducao": "Ódio"
+    },
+    {
+        "word": "Happy",
+        "traducao": "Feliz"
+    },
+    {
+        "word": "Sad",
+        "traducao": "Triste"
+    },
+    {
+        "word": "Angry",
+        "traducao": "Zangado"
+    },
+    {
+        "word": "Surprise",
+        "traducao": "Surpresa"
+    },
+    {
+        "word": "Fear",
+        "traducao": "Medo"
+    },
+    {
+        "word": "Peace",
+        "traducao": "Paz"
+    },
+    {
+        "word": "War",
+        "traducao": "Guerra"
+    },
+    {
+        "word": "Work",
+        "traducao": "Trabalho"
+    },
+    {
+        "word": "Play",
+        "traducao": "Brincar"
+    },
+    {
+        "word": "Eat",
+        "traducao": "Comer"
+    },
+    {
+        "word": "Drink",
+        "traducao": "Beber"
+    },
+    {
+        "word": "Sleep",
+        "traducao": "Dormir"
+    },
+    {
+        "word": "Wake",
+        "traducao": "Acordar"
+    },
+    {
+        "word": "Run",
+        "traducao": "Correr"
+    },
+    {
+        "word": "Walk",
+        "traducao": "Andar"
+    },
+    {
+        "word": "Swim",
+        "traducao": "Nadar"
+    },
+    {
+        "word": "Fly",
+        "traducao": "Voar"
+    },
+    {
+        "word": "Drive",
+        "traducao": "Dirigir"
     }
 ]
